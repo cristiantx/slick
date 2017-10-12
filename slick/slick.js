@@ -6,7 +6,7 @@
 |___/_|_|\___|_|\_(_)/ |___/
                    |__/
 
- Version: 1.8.1
+ Version: 1.8.0
   Author: Ken Wheeler
  Website: http://kenwheeler.github.io
     Docs: http://kenwheeler.github.io/slick
@@ -371,13 +371,13 @@
         if (_.options.fade === false) {
             transition[_.transitionType] = _.transformType + ' ' + _.options.speed + 'ms ' + _.options.cssEase;
         } else {
-            transition[_.transitionType] = 'opacity ' + _.options.speed + 'ms ' + _.options.cssEase;
+            //transition[_.transitionType] = 'opacity ' + _.options.speed + 'ms ' + _.options.cssEase;
         }
 
         if (_.options.fade === false) {
             _.$slideTrack.css(transition);
         } else {
-            _.$slides.eq(slide).css(transition);
+            //_.$slides.eq(slide).css(transition);
         }
 
     };
@@ -527,7 +527,7 @@
 
         _.$list = _.$slideTrack.wrap(
             '<div class="slick-list"/>').parent();
-        _.$slideTrack.css('opacity', 0);
+        //_.$slideTrack.css('opacity', 0);
 
         if (_.options.centerMode === true || _.options.swipeToSlide === true) {
             _.options.slidesToScroll = 1;
@@ -973,7 +973,7 @@
         if (_.cssTransitions === false) {
 
             _.$slides.eq(slideIndex).animate({
-                opacity: 0,
+              //  opacity: 0,
                 zIndex: _.options.zIndex - 2
             }, _.options.speed, _.options.easing);
 
@@ -982,7 +982,7 @@
             _.applyTransition(slideIndex);
 
             _.$slides.eq(slideIndex).css({
-                opacity: 0,
+               // opacity: 0,
                 zIndex: _.options.zIndex - 2
             });
 
@@ -2076,7 +2076,7 @@
                     right: targetLeft,
                     top: 0,
                     zIndex: _.options.zIndex - 2,
-                    opacity: 0
+                   // opacity: 0
                 });
             } else {
                 $(element).css({
@@ -2084,14 +2084,14 @@
                     left: targetLeft,
                     top: 0,
                     zIndex: _.options.zIndex - 2,
-                    opacity: 0
+                  //  opacity: 0
                 });
             }
         });
 
         _.$slides.eq(_.currentSlide).css({
             zIndex: _.options.zIndex - 1,
-            opacity: 1
+           // opacity: 1
         });
 
     };
